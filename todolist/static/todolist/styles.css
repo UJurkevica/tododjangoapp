@@ -1,12 +1,12 @@
 body {
-	background: #F0F8FF;
+	background: #3399ff;
 	font-family: 'Oswald', 'Futura', sans-serif;
 }
 #wrapper {
 	margin-top: 10% !important;
 }
 #content {
-	background:white;
+	background:#ffff99;
 	padding: 25px;
 }
 #content > h2 {
@@ -29,6 +29,6 @@ footer {
 	color: white;
 }
 #add-btn {
-	background-color:red;
-	border-color:black;
+	background-color:green;
+	border-color:green;
 }
