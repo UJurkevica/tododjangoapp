@@ -32,6 +32,13 @@ def completedTodo(request, todo_id):
 
     return redirect('index')
 
+def undocompletedTodo(request, todo_id):
+    todo = Todolist.objects.get(pk=todo_id)
+    todo.completed = False
+    todo.save()
+
+    return redirect('index')
+
 def deleteCompleted(request):
     Todolist.objects.filter(completed__exact=True).delete()
 

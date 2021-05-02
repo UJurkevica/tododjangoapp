@@ -1,16 +1,16 @@
 body {
-	background: #3399ff;
+	background: #9B7CB6;
 	font-family: 'Oswald', 'Futura', sans-serif;
 }
 #wrapper {
 	margin-top: 10% !important;
 }
 #content {
-	background:#ffff99;
+	background:#84D4C1;
 	padding: 25px;
 }
 #content > h2 {
-	font-size: 18px;
+	font-size: 25px;
 	text-align: center;
 	padding-top: 0;
 }
@@ -22,13 +22,29 @@ body {
 }
 .todo-completed {
 	text-decoration: line-through;
-	background: rgba(149, 165, 166, .3);
+	font-style: italic;
+	background: rgba(110, 106, 103, .5);
+}
+.todo-uncompleted {
+	text-decoration: bold;
+	font-style: italic;
+	background: rgba(226, 174, 182, .5);
 }
 footer {
 	margin-top: 20px;
 	color: white;
 }
 #add-btn {
-	background-color:green;
-	border-color:green;
+	background-color:#C8C97F;
+	border-color:grey;
+}
+
+#del-all {
+	background-color: #BD0629;
+	border-color: #670A18;
+}
+
+#del-compl {
+	background-color: #1878AA;
+	border-color: #165575;
 }

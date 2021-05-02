@@ -19,7 +19,7 @@
 
 			<div class="row">
 				<div class="col-lg-4 col-lg-offset-4" id="content">
-					<h1>What to do today </h1>
+					<h1>My to do list </h1>
 
 					<form action="{% url 'add' %}" method="POST" role="form">
 						{% csrf_token %}
@@ -39,13 +39,13 @@
 							<div class="btn-toolbar">
 								<div class="btn-group">
 									<a href="{% url 'deletecompleted' %}">
-									<button type="button" class="btn btn-warning">
+									<button type="button" class="btn btn-warning" id="del-compl">
 										<i class="glyphicon glyphicon-trash"></i> DELETE COMPLETED
 									</button></a>
 								</div>
 								<div class="btn-group">
 									<a href="{% url 'deleteall' %}">
-									<button type="button" class="btn btn-danger">
+									<button type="button" class="btn btn-danger" id="del-all">
 										<i class="glyphicon glyphicon-trash"></i> DELETE ALL
 									</button></a>
 								</div>
@@ -56,9 +56,9 @@
 					<ul class="list-group t20">
 						{% for todolist in todo_items %}
 							{% if todolist.completed %}
-							<li class="list-group-item todo-completed">{{todolist.text}}</li>
+							<a href="{% url 'uncompleted' todolist.id %}"><li class="list-group-item todo-completed">{{todolist.text}}</li></a>
 							{% else %}
-							<a href="{% url 'completed' todolist.id %}"><li class="list-group-item">{{todolist.text}}</li></a>
+							<a href="{% url 'completed' todolist.id %}"><li class="list-group-item todo-uncompleted">{{todolist.text}}</li></a>
 							{% endif %}
 							{% endfor %}
 						<!-- <li class="list-group-item">Learn something new.</li> -->
